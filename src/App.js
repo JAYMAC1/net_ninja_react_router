@@ -34,18 +34,15 @@ const router = createBrowserRouter(
         <Route path='contact' element={<Contact />} />
       </Route>
 
-      <Route path='careers' element={<CareersLayout />}>
-        <Route
-          index
-          element={<Careers />}
-          loader={careersLoader}
-          errorElement={<CareerFetchError />}
-        />
+      <Route
+        path='careers'
+        element={<CareersLayout />}
+        errorElement={<CareersError />}>
+        <Route index element={<Careers />} loader={careersLoader} />
         <Route
           path=':id'
           element={<CareerDetails />}
           loader={careerDetailsLoader}
-          errorElement={<CareersError />}
         />
       </Route>
 
