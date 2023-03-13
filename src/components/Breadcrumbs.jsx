@@ -16,7 +16,6 @@ const Breadcrumbs = () => {
       )
     })
 
-  console.log(crumbs)
   return <div className='breadcrumbs'>{crumbs}</div>
 }
 
